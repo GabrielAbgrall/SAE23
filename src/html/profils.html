@@ -9,14 +9,20 @@
     <h2>Éditer son profil</h2>
 
     <form action="traitement_profil.php" method="POST" enctype="multipart/form-data">
-        <label for="utilisateur">Pseudo :</label>
+        <label for="utilisateur">utilisateur :</label>
         <input type="text" id="utilisateur" name="utilisateur"><br><br>
 
-        <label for="vehicule">Véhicule :</label>
-        <input type="text" id="vehicule" name="vehicule"><br><br>
+        <label for="numéro">numéro :</label>
+        <input type="text" id="numéro" name="numéro"><br><br>
 
-        <label for="image_profil">Image de profil :</label>
-        <input type="file" id="image_profil" name="image_profil"><br><br>
+        <label for="email">email :</label>
+        <input type="text" id="email" name="email"><br><br>
+
+        <label for="groupe">groupe :</label>
+        <input type="text" id="groupe" name="groupe"><br><br>
+
+        <label for="mdp">mdp :</label>
+        <input type="text" id="mdp" name="mdp"><br><br>
 
         <input type="submit" value="Enregistrer les modifications">
     </form>
