@@ -1,25 +1,29 @@
 <?php
 
-function open_file($path) {
-    return fread(fopen($path, 'r'), filesize($path));
+function read_file($path) {
+    $file = fopen($path, 'r');
+    $data = fread($file, filesize($path));
+    fclose($file);
+    clearstatcache();
+    return $data;
 }
 
 function get_template($name) {
-    return open_file("src/html/$name.html");
+    return read_file("src/html/$name.html");
 }
 
 function load_data($path) {
-    return json_decode(fread(
-        fopen("data/$path.json", 'r'),
-        filesize("data/$path.json")
-    ), true);
+    return json_decode(read_file("data/$path.json"), true);
 }
 
 function save_data($path, $data) {
+    $file = fopen("data/$path.json", 'w');
     fwrite(
-        fopen("data/$path.json", 'w'),
+        $file,
         json_encode($data)
     );
+    fclose($file);
+    clearstatcache();
 }
 
 ?>
