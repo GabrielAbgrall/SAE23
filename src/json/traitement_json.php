@@ -47,14 +47,5 @@ foreach ($obj as $user) {
         }
     }
 }
-header('Location: index.php');
-die();
 
-#verification de la session
-echo "/////////////////";
-#print_r($_SESSION);
-
-# affiche lien retour
-echo '<a href="index.php">retour</a><p>';
-echo '<a href="Deconnexion.php">deco</a>';
 ?>
