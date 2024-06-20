@@ -97,7 +97,7 @@
                         37
                       </h6>
                       <p>
-                        Le chiffre 37 n'est jamais choisi au hasard tout comme votre réussite ne sera jamais un hasard si vous choisiez de travailler avec nous !
+                        Le chiffre 37 n'est jamais choisi au hasard tout comme votre réussite ne sera jamais un hasard si vous choisissez de travailler avec nous !
                         
                       </p>
                     </div>
