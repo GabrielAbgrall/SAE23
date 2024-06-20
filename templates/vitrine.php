@@ -11,7 +11,7 @@
 
     <body>
         
-    <nav class="navbar navbar-expand-lg " style="background-color:#BDBDBD">
+    <nav class="navbar navbar-expand-lg  bg-body-tertiary rounded-pill" >
   <div class="container-fluid">
     <button
       class="navbar-toggler"
@@ -88,7 +88,7 @@
         <?=$content?> 
 
 
-        <footer class="text-center text-lg-start text-secondary " style="background-color:#BDBDBD">
+        <footer class="text-center text-lg-start text-secondary bg-body-tertiary rounded" >
             <div class="container p-4 pb-0">
                 <section class="">
                   <div class="row">
