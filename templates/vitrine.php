@@ -11,7 +11,7 @@
 
     <body>
         
-    <nav class="navbar navbar-expand-lg navbar-secondary bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg " style="background-color:#BDBDBD">
   <div class="container-fluid">
     <button
       class="navbar-toggler"
@@ -34,7 +34,7 @@
           loading="lazy"/>
       </a>
     
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-center">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
         <li class="nav-item">
           <a class="nav-link" href="activité.php">Nos activitées</a>
         </li>
