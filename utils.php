@@ -8,8 +8,11 @@ function read_file($path) {
     return $data;
 }
 
-function get_template($name) {
-    return read_file("src/html/$name.html");
+function save_file($path, $data) {
+    $file = fopen($path, 'w');
+    fwrite($file, $data);
+    fclose($file);
+    clearstatcache();
 }
 
 function load_data($path) {
@@ -17,13 +20,7 @@ function load_data($path) {
 }
 
 function save_data($path, $data) {
-    $file = fopen("data/$path.json", 'w');
-    fwrite(
-        $file,
-        json_encode($data)
-    );
-    fclose($file);
-    clearstatcache();
+    save_data("data/$path.json", json_encode($data));
 }
 
 ?>
