@@ -6,8 +6,8 @@ switch(strtolower($_SERVER['REQUEST_URI'])) {
         MVCExemple();
         break ;
     case '/accueil':
-        require_once 'controleurs/Accueil.php';
-        Vitrine();
+        require_once 'controleurs/Vitrine.php';
+        Accueil();
         break;
 }
 
