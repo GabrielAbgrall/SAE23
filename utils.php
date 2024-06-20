@@ -8,10 +8,6 @@ function read_file($path) {
     return $data;
 }
 
-function get_template($name) {
-    return read_file("src/html/$name.html");
-}
-
 function load_data($path) {
     return json_decode(read_file("data/$path.json"), true);
 }
