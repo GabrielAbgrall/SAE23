@@ -1,12 +1,12 @@
 <?php
 
 switch(strtolower($_SERVER['REQUEST_URI'])) {
-    case '/mvcexemple':
-        require_once 'controleurs/MVCExemple.php';
+    case '/mvc-example':
+        require_once 'controllers/MVCExemple.php';
         MVCExemple();
         break ;
     case '/accueil':
-        require_once 'controleurs/Accueil.php';
+        require_once 'controllers/Accueil.php';
         Vitrine();
         break;
 }

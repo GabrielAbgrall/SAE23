@@ -2,9 +2,9 @@
 
 function MVCExemple() {
     if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-        require 'modeles/mvc_exemple.php';
+        require 'models/mvc_example.php';
         $data = get_data();
-        require 'vues/mvc_exemple.php';
+        require 'views/mvc_example.php';
     }
 }
 
