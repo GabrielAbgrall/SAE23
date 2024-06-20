@@ -1,8 +1,9 @@
 <?php
 
-$path = explode(
-    '/', 
-    substr($_SERVER['REQUEST_URI'], 1)
-);
+switch(strtolower($_SERVER['REQUEST_URI'])) {
+    case '/mvcexemple':
+        require_once 'controleurs/MVCExemple.php';
+        MVCExemple();
+}
 
 ?>
