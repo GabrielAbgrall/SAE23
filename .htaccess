@@ -1,0 +1,10 @@
+# Activation des redirections
+RewriteEngine on
+
+# Ne pas rediriger les fichier et dossiers existants
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# Rediriger tout vers index.php (controlleur principal)
+# Passer le chemin en paramètre (path)
+RewriteRule ^.*$ /index.php [L,QSA]
