@@ -11,7 +11,8 @@
 </div>
 <br>
 <br>
-<div class="row">
+
+<div class="row" style="margin-left : 75px;">
 <div class="col p-3">
   <div class="card" style="width:400px">
     <img class="card-img-top" src="./src/img/batiement.png" alt="Card image" style="width:100%">
