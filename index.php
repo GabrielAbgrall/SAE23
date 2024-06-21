@@ -9,6 +9,10 @@ switch(strtolower($_SERVER['REQUEST_URI'])) {
         require_once 'controllers/vitrine.php';
         accueil();
         break;
+    case '/a-propos':
+        require_once 'controllers/vitrine.php';
+        a_propos();
+        break;
 }
 
 ?>
