@@ -32,7 +32,7 @@
 </div>
 <div class="col p-3">
   <div class="card" style="width:400px">
-    <img class="card-img-top" src="./src/img/angers.jpeg" alt="Card image" style="width:100%">
+    <img class="card-img-top" src="./src/img/stmalo.jpeg" alt="Card image" style="width:100%">
     <div class="card-body">
       <h4 class="card-title">37</h4>
       <p class="card-text">Un nouveau site à Saint-Malo</p>
@@ -41,36 +41,42 @@
   </div>
 </div>
 </div>
+<br>
+<div class="container">
+    <hr class="featurette-divider">
+</div>
+<br>
+<div class="container">
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
 
-<div id="demo" class="carousel slide" data-bs-ride="carousel">
-
-  <!-- Indicators/dots -->
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
-  </div>
-  
-  <!-- The slideshow/carousel -->
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="la.jpg" alt="Los Angeles" class="d-block" style="width:100%">
+    <!-- Indicators/dots -->
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
     </div>
-    <div class="carousel-item">
-      <img src="chicago.jpg" alt="Chicago" class="d-block" style="width:100%">
+    
+    <!-- The slideshow/carousel -->
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+        <img src="./src/img/frise1.png" alt="frise1" class="d-block" style="width:100%">
+        </div>
+        <div class="carousel-item">
+        <img src="chicago.jpg" alt="Chicago" class="d-block" style="width:100%">
+        </div>
+        <div class="carousel-item">
+        <img src="ny.jpg" alt="New York" class="d-block" style="width:100%">
+        </div>
     </div>
-    <div class="carousel-item">
-      <img src="ny.jpg" alt="New York" class="d-block" style="width:100%">
+    
+    <!-- Left and right controls/icons -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
     </div>
-  </div>
-  
-  <!-- Left and right controls/icons -->
-  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </button>
 </div>
 
 
