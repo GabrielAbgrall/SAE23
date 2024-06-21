@@ -1,9 +1,12 @@
-<?php 
-include "utils.php";
+<?php $title = "A Propos"; ?>
 
-$base = get_template("vitrine");
+<?php ob_start(); ?>
 
-$base = str_replace("%TITRE%", "blou", $base);
+<h1>Au sujet de l'entreprise</h1>
+<p>Bienvenue sur la page de présentation d'exemple du modèle MVC</p>
 
-echo $base;
-?>
+<p><?= $data ?></p>
+
+<?php $content = ob_get_clean(); ?>
+
+<?php require 'templates/base.php'; ?>
