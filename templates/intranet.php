@@ -51,5 +51,8 @@
 
     </nav>
 </div >
+<div>
 $content
+</div>
 </body>
+</html>

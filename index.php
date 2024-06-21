@@ -9,7 +9,10 @@ switch(strtolower($_SERVER['REQUEST_URI'])) {
         require_once 'controllers/accueil.php';
         vitrine();
         break;
-    
+    case '/intranet':
+        require_once 'controllers/intranet.php';
+        intranet();
+        break;
 }
 
 ?>
