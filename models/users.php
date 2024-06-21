@@ -32,12 +32,7 @@ function create_user($name, $firstname, $phone, $mail, $password, $group){
     return true;
 }
 function user_conected(){
-    if (isset($_SESSION['user'])==True){
-        return True;
-    }
-    else{
-        return False;
-    }
+    return isset($_SESSION['user']);
 }
 
 

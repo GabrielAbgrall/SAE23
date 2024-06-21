@@ -34,16 +34,16 @@
           <a class="nav-link" href="/intranet/document">Documents</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="">AnnuaireI</a>
+          <a class="nav-link" href="/intranet/directory_internal">AnnuaireI</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">AnnuaireF</a>
+          <a class="nav-link" href="/intranet/directory_partner">AnnuaireF</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">AnnuaireC</a>
+            <a class="nav-link" href="/intranet/directory_client">AnnuaireC</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Wiki</a>
+            <a class="nav-link" href="/intranet/wiki">Wiki</a>
           </li>
       </ul>
     </nav>
