@@ -1,8 +1,7 @@
 <?php
 
-$data = "DATA";
-
 function get_data() {
+    $data = "DATA";
     return $data;
 }
 
