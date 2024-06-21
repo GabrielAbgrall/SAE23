@@ -24,6 +24,42 @@
         <img src="/src/img/batiement.png" style="width:200px; height:auto" class="rounded-circle">
     </div>
 </div>
+<div class="container">
+    <hr class="featurette-divider">
+</div>
+
+
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+    
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+    </div>
+
+    
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+        <img src="/src/img/Carousel1.png" alt="ExPub1" class="d-block w-100">
+        </div>
+        <div class="carousel-item">
+        <img src="/src/img/Carousel2.png" alt="ExPub2" class="d-block w-100">
+        </div>
+        <div class="carousel-item">
+        <img src="/src/img/Carousel3.png" alt="ExPub3" class="d-block w-100">
+        </div>
+    </div>
+
+    
+    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+    </div>
+
 
 
 <div class="container my-5">
@@ -48,6 +84,11 @@
             <p>Gestion de vos réseaux sociaux pour une interaction optimale avec votre audience.</p>
         </div>
     </div>
+</div>
+
+
+<div class="container">
+    <hr class="featurette-divider">
 </div>
 
 
