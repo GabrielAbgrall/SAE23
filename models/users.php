@@ -64,6 +64,10 @@ function connect($mail, $password){
     return true;
 }
 
+function is_connected() {
+    return isset($_SESSION);
+}
+
 function disconnect(){
     session_destroy();
     unset($_SESSION);
@@ -72,6 +76,13 @@ function disconnect(){
 function check_password($mail, $password){
     $user = get_user($mail);
     return password_verify($password, $user["password"]);
+}
+
+function has_permission($permission_level) {
+    if(!is_connected()) return false;
+    
+    require 'models/groups.php';
+    return get_group($_SESSION['group'])['level'] >= $permission_level;
 }
 
 ?>

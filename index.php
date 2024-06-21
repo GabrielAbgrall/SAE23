@@ -1,13 +1,20 @@
 <?php
 
 switch(strtolower($_SERVER['REQUEST_URI'])) {
+    case '/':
+        header('Location: /accueil');
+        break;
     case '/mvc-example':
         require_once 'controllers/mvc_example.php';
         mvc_example();
         break ;
     case '/accueil':
-        require_once 'controllers/accueil.php';
-        vitrine();
+        require_once 'controllers/vitrine.php';
+        accueil();
+        break;
+    case '/a-propos':
+        require_once 'controllers/vitrine.php';
+        a_propos();
         break;
     case '/intranet':
         require_once 'controllers/intranet.php';
