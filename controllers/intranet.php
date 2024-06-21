@@ -11,8 +11,6 @@ function directoryp() {
     }
 }
 function directoryi() {
-    require "models/users.php";
-    if(!has_permission(10)) abort(403);
     if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         require 'views/directory_internal.php';
     }
