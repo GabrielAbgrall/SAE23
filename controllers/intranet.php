@@ -1,5 +1,5 @@
 <?php
-
+require_once "utils.php";
 function intranet() {
     if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         require 'views/intranet.php';
@@ -11,7 +11,8 @@ function directoryp() {
     }
 }
 function directoryi() {
-    if(!has_permission(10)) return;
+    require "models/users.php";
+    if(!has_permission(10)) abort(403);
     if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         require 'views/directory_internal.php';
     }
