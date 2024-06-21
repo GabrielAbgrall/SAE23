@@ -1,6 +1,6 @@
 <?php 
 
-require "utils.php";
+require_once "utils.php";
 
 function get_users(){
     return load_data("users");
@@ -72,7 +72,7 @@ function check_password($mail, $password){
 function has_permission($permission_level) {
     if(!is_connected()) return false;
     
-    require 'models/groups.php';
+    require_once 'models/groups.php';
     return get_group($_SESSION['group'])['level'] >= $permission_level;
 }
 
