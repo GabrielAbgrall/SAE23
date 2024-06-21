@@ -22,6 +22,15 @@ function create_user($name, $firstname, $phone, $mail, $password, $group){
     array_push($users, $user);
     save_data("users", $users);
 }
+function user_conected(){
+    if (isset($_SESSION['user'])==True){
+        return True;
+    }
+    else{
+        return False;
+    }
+}
+
 
 
 ?>
