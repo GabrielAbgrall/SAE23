@@ -13,7 +13,7 @@
     
     <nav class="navbar navbar-expand-lg  p-0 m-0 d-flex flex-row justify-content-between" style="background:#455A64">
         <div class="d-flex flex-row align-items-center justify-content-center m-0 p-0">
-            <a class="navbar-brand m-0 p-0" href="/views/accueil.php">
+            <a class="navbar-brand m-0 p-0" href="accueil">
                 <img src="/src/img/37.ico" height="75px" alt="Logo" loading="lazy"/>
             </a>
 
