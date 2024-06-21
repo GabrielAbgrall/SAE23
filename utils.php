@@ -20,7 +20,7 @@ function load_data($path) {
 }
 
 function save_data($path, $data) {
-    save_data("data/$path.json", json_encode($data));
+    save_file("data/$path.json", json_encode($data));
 }
 
 ?>

@@ -28,7 +28,7 @@
     <hr class="featurette-divider">
 </div>
 
-
+<div 
     <div id="demo" class="carousel slide" data-bs-ride="carousel">
 
     
@@ -41,13 +41,13 @@
     
     <div class="carousel-inner">
         <div class="carousel-item active">
-        <img src="/src/img/Carousel1.png" alt="ExPub1" class="d-block w-100">
+        <img src="/src/img/CarouselA.png" alt="ExPub1" class="d-block w-100 ">
         </div>
         <div class="carousel-item">
-        <img src="/src/img/Carousel2.png" alt="ExPub2" class="d-block w-100">
+        <img src="/src/img/CarouselB.png" alt="ExPub2" class="d-block w-100">
         </div>
         <div class="carousel-item">
-        <img src="/src/img/Carousel3.png" alt="ExPub3" class="d-block w-100">
+        <img src="/src/img/CarouselC.png" alt="ExPub3" class="d-block w-100">
         </div>
     </div>
 
