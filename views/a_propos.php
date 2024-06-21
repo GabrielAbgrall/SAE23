@@ -56,7 +56,6 @@
     <div class="carousel-indicators">
         <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
         <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-        <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
     </div>
     
     <!-- The slideshow/carousel -->
@@ -65,10 +64,7 @@
         <img src="./src/img/frise1.png" alt="frise1" class="d-block" style="width:100%">
         </div>
         <div class="carousel-item">
-        <img src="chicago.jpg" alt="Chicago" class="d-block" style="width:100%">
-        </div>
-        <div class="carousel-item">
-        <img src="ny.jpg" alt="New York" class="d-block" style="width:100%">
+        <img src="./src/img/frise2.png" alt="frise2" class="d-block" style="width:100%">
         </div>
     </div>
     
