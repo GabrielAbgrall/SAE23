@@ -8,18 +8,19 @@ function read_file($path) {
     return $data;
 }
 
+function save_file($path, $data) {
+    $file = fopen($path, 'w');
+    fwrite($file, $data);
+    fclose($file);
+    clearstatcache();
+}
+
 function load_data($path) {
     return json_decode(read_file("data/$path.json"), true);
 }
 
 function save_data($path, $data) {
-    $file = fopen("data/$path.json", 'w');
-    fwrite(
-        $file,
-        json_encode($data)
-    );
-    fclose($file);
-    clearstatcache();
+    save_data("data/$path.json", json_encode($data));
 }
 
 ?>
