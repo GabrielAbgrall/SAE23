@@ -1,7 +1,9 @@
 <?php $title = "A Propos"; ?>
 
 <?php ob_start(); ?>
-
+<div class="container">
+    <hr class="featurette-divider">
+</div>
 <div class="jumbotron jumbotron-fluid text-white mb-4 py-4" style="background-color:#455A64">
     <div class="text-center">
         <h1>Au sujet de l'entreprise</h1>
