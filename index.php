@@ -9,6 +9,7 @@ switch(strtolower($_SERVER['REQUEST_URI'])) {
         require_once 'controllers/Accueil.php';
         Vitrine();
         break;
+    
 }
 
 ?>
