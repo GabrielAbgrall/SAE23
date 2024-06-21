@@ -1,6 +1,9 @@
 <?php
 
 switch(strtolower($_SERVER['REQUEST_URI'])) {
+    case '/':
+        header('Location: /accueil');
+        break;
     case '/mvc-example':
         require_once 'controllers/mvc_example.php';
         mvc_example();
