@@ -9,6 +9,9 @@ switch(strtolower($_SERVER['REQUEST_URI'])) {
         require_once 'controllers/accueil.php';
         vitrine();
         break;
+    default:
+        header($_SERVER["SERVER_PROTOCOL"]." 404 Not Found");
+        break;
 }
 
 ?>
