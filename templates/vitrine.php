@@ -11,7 +11,7 @@
 
 <body>
     
-    <nav class="navbar navbar-expand-lg  bg-body-tertiary p-0 m-0 d-flex flex-row justify-content-between" >
+    <nav class="navbar navbar-expand-lg  p-0 m-0 d-flex flex-row justify-content-between" style="background:#455A64">
         <div class="d-flex flex-row align-items-center justify-content-center m-0 p-0">
             <a class="navbar-brand m-0 p-0" href="#">
                 <img src="/src/img/37.ico" height="75px" alt="Logo" loading="lazy"/>
@@ -19,13 +19,13 @@
 
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                 <li class="nav-item">
-                    <a class="nav-link" href="activities">Nos activitées</a>
+                    <a class="nav-link text-light" href="activities">Nos activitées</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="personnes">Qui sommes-nous?</a>
+                    <a class="nav-link text-light" href="personnes">Qui sommes-nous?</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="a-propos">A propos</a>
+                    <a class="nav-link text-light" href="a-propos">A propos</a>
                 </li>
             </ul>
         </div>

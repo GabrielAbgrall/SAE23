@@ -4,6 +4,9 @@
 
 
 
+<div class="container">
+    <hr class="featurette-divider">
+</div>
 <div class="jumbotron jumbotron-fluid text-white mb-4 py-4" style="background-color:#455A64">
     <div class="container text-center">
         <h1 class="display-4">Bienvenue au 37 !</h1>
@@ -28,7 +31,7 @@
     <hr class="featurette-divider">
 </div>
 
-<div 
+<div >
     <div id="demo" class="carousel slide" data-bs-ride="carousel">
 
     
