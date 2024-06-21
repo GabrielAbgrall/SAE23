@@ -29,6 +29,9 @@ switch(strtolower($_SERVER['REQUEST_URI'])) {
         require_once 'controllers/intranet.php';
         wiki();
         break; 
+    default:
+        header($_SERVER["SERVER_PROTOCOL"]." 404 Not Found");
+        break;
 }
 
 ?>
