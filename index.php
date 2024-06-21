@@ -6,7 +6,7 @@ switch(strtolower($_SERVER['REQUEST_URI'])) {
         mvc_example();
         break ;
     case '/accueil':
-        require_once 'controllurs/vitrine.php';
+        require_once 'controllers/vitrine.php';
         accueil();
         break;
 }
