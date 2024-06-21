@@ -14,10 +14,13 @@
 
 <div class="container d-flex flex-row mt-4 justify-content-between">
     <div class="col-md-6">
-        <h2>Qui sommes-nous ?</h2>
-        <p>Nous sommes une agence de communication et de marketing dédiée à aider les entreprises à augmenter leur visibilité et à atteindre leurs objectifs commerciaux grâce à des stratégies innovantes et efficaces.</p>
+        <h2>Notre objectif</h2>
+        <p>Nous sommes une agence de communication et de marketing passionnée par l'accompagnement des entreprises dans leur quête de visibilité accrue et d'atteinte de leurs objectifs commerciaux. 
+        Grâce à des stratégies innovantes et efficaces, nous aidons nos clients à se démarquer sur le marché et à maximiser leur impact.
+        Que ce soit par le biais de campagnes publicitaires, de gestion de réseaux sociaux, de création de contenu ou de développement de marque, notre équipe d'experts est dédiée à fournir des solutions sur mesure adaptées aux besoins spécifiques de chaque entreprise.
+</p>
     </div>
-    <div class="mx-4">
+    <div class="mx-5">
         <img src="/src/img/batiement.png" style="width:200px; height:auto" class="rounded-circle">
     </div>
 </div>
