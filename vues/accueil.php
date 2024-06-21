@@ -19,7 +19,7 @@
             <p>Nous sommes une agence de communication et de marketing dédiée à aider les entreprises à augmenter leur visibilité et à atteindre leurs objectifs commerciaux grâce à des stratégies innovantes et efficaces.</p>
         </div>
         <div class="col-md-6">
-            <img src="https://via.placeholder.com/500" class="img-fluid" alt="Entreprise">
+            <img src="/src/img/batiement.png" style="width:200px; height:auto" class="rounded-circle float-right">
         </div>
     </div>
 </div>
