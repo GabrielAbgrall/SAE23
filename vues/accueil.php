@@ -4,7 +4,7 @@
 
 
 
-<div class="jumbotron jumbotron-fluid text-white " style="background-color:#455A64">
+<div class="jumbotron jumbotron-fluid text-white mb-4 py-4" style="background-color:#455A64">
     <div class="container text-center">
         <h1 class="display-4">Bienvenue au 37 !</h1>
         <p class="lead">Votre partenaire en communication et marketing digital.</p>
@@ -12,15 +12,13 @@
 </div>
 
 
-<div class="container my-5">
-    <div class="row">
-        <div class="col-md-6">
-            <h2>Qui sommes-nous ?</h2>
-            <p>Nous sommes une agence de communication et de marketing dédiée à aider les entreprises à augmenter leur visibilité et à atteindre leurs objectifs commerciaux grâce à des stratégies innovantes et efficaces.</p>
-        </div>
-        <div class="col-md-6">
-            <img src="/src/img/batiement.png" style="width:200px; height:auto" class="rounded-circle float-right">
-        </div>
+<div class="container d-flex flex-row mt-4 justify-content-between">
+    <div class="col-md-6">
+        <h2>Qui sommes-nous ?</h2>
+        <p>Nous sommes une agence de communication et de marketing dédiée à aider les entreprises à augmenter leur visibilité et à atteindre leurs objectifs commerciaux grâce à des stratégies innovantes et efficaces.</p>
+    </div>
+    <div class="mx-4">
+        <img src="/src/img/batiement.png" style="width:200px; height:auto" class="rounded-circle">
     </div>
 </div>
 
