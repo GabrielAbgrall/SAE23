@@ -19,13 +19,13 @@
 
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                 <li class="nav-item">
-                    <a class="nav-link" href="activité.php">Nos activitées</a>
+                    <a class="nav-link" href="activities">Nos activitées</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="personne.php">Qui sommes-nous?</a>
+                    <a class="nav-link" href="personnes">Qui sommes-nous?</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="a_propos.php">A propos</a>
+                    <a class="nav-link" href="a-propos">A propos</a>
                 </li>
             </ul>
         </div>
