@@ -14,7 +14,7 @@
 
 <div class="container d-flex flex-row mt-4 justify-content-between">
     <div class="col-md-6">
-        <h2>Notre objectif</h2>
+        <h2>Notre objectif !</h2>
         <p>Nous sommes une agence de communication et de marketing passionnée par l'accompagnement des entreprises dans leur quête de visibilité accrue et d'atteinte de leurs objectifs commerciaux. 
         Grâce à des stratégies innovantes et efficaces, nous aidons nos clients à se démarquer sur le marché et à maximiser leur impact.
         Que ce soit par le biais de campagnes publicitaires, de gestion de réseaux sociaux, de création de contenu ou de développement de marque, notre équipe d'experts est dédiée à fournir des solutions sur mesure adaptées aux besoins spécifiques de chaque entreprise.
@@ -32,16 +32,19 @@
         <div class="col-md-4">
             <i class="fas fa-bullhorn fa-3x mb-3"></i>
             <h3>Marketing Digital</h3>
+            <img src="/src/img/Marketing.png" style="width:200px; height:auto" class="rounded">
             <p>Des stratégies de marketing digital sur mesure pour atteindre vos objectifs.</p>
         </div>
         <div class="col-md-4">
             <i class="fas fa-chart-line fa-3x mb-3"></i>
             <h3>SEO</h3>
+            <img src="/src/img/SEO.png" style="width:200px; height:auto" class="rounded">
             <p>Optimisation de votre présence en ligne pour un meilleur référencement.</p>
         </div>
         <div class="col-md-4">
             <i class="fas fa-users fa-3x mb-3"></i>
             <h3>Community Management</h3>
+            <img src="/src/img/Community.png" style="width:200px; height:auto" class="rounded">
             <p>Gestion de vos réseaux sociaux pour une interaction optimale avec votre audience.</p>
         </div>
     </div>

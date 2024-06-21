@@ -62,7 +62,7 @@
                     </p>
                 </div>
                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                    <h6 class="text-uppercase mb-4 font-weight-bold">Services porposés : </h6>
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Services poprosés : </h6>
                     <p>
                     <a class="text-secondary">Community manager</a>
                     </p>
