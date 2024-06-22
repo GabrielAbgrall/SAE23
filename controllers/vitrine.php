@@ -16,3 +16,12 @@ function a_propos() {
 }
 
 ?>
+<?php
+
+function activities() {
+    if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+        require 'views/activities.php';
+    }
+}
+
+?>
