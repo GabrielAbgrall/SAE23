@@ -25,3 +25,12 @@ function activities() {
 }
 
 ?>
+<?php
+
+function personnes() {
+    if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+        require 'views/personne.php';
+    }
+}
+
+?>

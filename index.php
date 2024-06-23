@@ -20,6 +20,10 @@ switch(strtolower($_SERVER['REQUEST_URI'])) {
         require_once 'controllers/vitrine.php';
         activities();
         break;
+    case '/personnes':
+        require_once 'controllers/vitrine.php';
+        personnes();
+        break;
     default:
         header($_SERVER["SERVER_PROTOCOL"]." 404 Not Found");
         break;
