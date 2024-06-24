@@ -6,6 +6,14 @@ function get_users(){
     return load_data("users");
 }
 
+function get_users_with_permission($level){
+    $users = array();
+    foreach(get_users() as $u) {
+        if(has_permission($u, $level)) array_push($u);
+    }
+    return $users;
+}
+
 function get_user($mail){
     $users = get_users();
 
