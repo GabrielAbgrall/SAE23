@@ -1,6 +1,6 @@
 <?php
 
-include "utils.php";
+require_once "utils.php";
 
 function get_groups() {
     return load_data('groups');
