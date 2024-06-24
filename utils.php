@@ -27,4 +27,12 @@ function abort($code) {
     header($_SERVER["SERVER_PROTOCOL"]."Error $code");
     exit;
 }
+
+function redirect($uri, $next=NULL) {
+    $uri = "Location:$uri";
+    if($next != NULL) $uri .= "?next=$next";
+    header($uri);
+    exit;
+}
+
 ?>

@@ -6,6 +6,36 @@ function get_users(){
     return load_data("users");
 }
 
+function get_users_with_permission_min($level){
+    $users = array();
+    foreach(get_users() as $u) {
+        if(has_permission($u, $level)) array_push($users, $u);
+    }
+    return $users;
+}
+
+function get_users_with_permission_equals($level){
+    $users = array();
+    require_once 'models/groups.php';
+    foreach(get_users() as $u) {
+        $g = get_group($u['group']);
+        if($g['level'] == $level) array_push($users, $u);
+    }
+    return $users;
+}
+
+function get_users_with_permission_between($min, $max){
+    $users = array();
+    require_once 'models/groups.php';
+    foreach(get_users() as $u) {
+        $g = get_group($u['group']);
+        if($g['level'] >= $min && $g['level'] < $min) {
+            array_push($users, $u);
+        }
+    }
+    return $users;
+}
+
 function get_user($mail){
     $users = get_users();
 
@@ -73,11 +103,13 @@ function check_password($mail, $password){
     return password_verify($password, $user["password"]);
 }
 
-function has_permission($permission_level) {
-    if(!is_connected()) return false;
-    
+function has_permission($permission_level, $user=NULL) {
+    if(!isset($user)) {
+        if(!is_connected()) return false;
+        $user = $_SESSION;
+    }
     require_once 'models/groups.php';
-    return get_group($_SESSION['group'])['level'] >= $permission_level;
+    return get_group($user['group'])['level'] >= $permission_level;
 }
 
 ?>

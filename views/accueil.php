@@ -31,9 +31,7 @@
     <hr class="featurette-divider">
 </div>
 
-<div >
     <div id="demo" class="carousel slide" data-bs-ride="carousel">
-
     
     <div class="carousel-indicators">
         <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
@@ -61,7 +59,7 @@
     <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
         <span class="carousel-control-next-icon"></span>
     </button>
-    </div>
+</div>
 
 
 
