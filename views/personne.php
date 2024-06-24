@@ -60,6 +60,8 @@
         <p>@mail, num, poste</p>
     </div>
 </div>
+<br>
+<br>
 <?php $content = ob_get_clean(); ?>
 
 <?php require 'templates/vitrine.php'; ?>
