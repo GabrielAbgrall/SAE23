@@ -15,6 +15,27 @@
 <div>
     <p> fonction php qui affiche les directeurs et le site dont ils sont directeurs</p>
 </div>
+<?php
+require_once "./models/users.php";
+
+$directeurs = get_users_with_permission_equals(40);
+
+foreach($directeurs as $directeur){
+    echo '<div class="container d-flex flex-row mt-4 justify-content-between">
+    <div class="mx-5">
+            <img src="/src/img/pers.png" style="width:150px; height:auto" class="rounded-circle">
+        </div>
+        <div class="col-md-6">
+            <h4>'.$directeur["name"].' '.$directeur["firstname"].'</h4>
+            <p>'.$directeur["poste"].'<br>'.$directeur["mail"].'<br>'.$directeur["phone"].'<br></p>
+        </div>
+    </div>
+    <div class="container">
+        <hr class="featurette-divider">
+    </div>';
+};
+?>
+<h3> Exemple de ce que ça donne(a enlever quand le php fonctionnera)</h3>
 <div class="container d-flex flex-row mt-4 justify-content-between">
 <div class="mx-5">
         <img src="/src/img/pers.png" style="width:150px; height:auto" class="rounded-circle">
