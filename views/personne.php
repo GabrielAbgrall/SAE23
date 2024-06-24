@@ -2,9 +2,19 @@
 
 <?php ob_start(); ?>
 
-<h1>MVC Exemple</h1>
-<p>Bienvenue sur la page de présentation d'exemple du modèle MVC</p>
-
+<div class="container">
+    <hr class="featurette-divider">
+</div>
+<div class="jumbotron jumbotron-fluid text-white mb-4 py-4" style="background-color:#455A64">
+    <div class="text-center">
+        <h1>Qui sommes nous ?</h1>
+    </div>
+</div>
+<br>
+<br>
+<div>
+    <p> fonction php qui affiche les directeurs et le site dont ils sont directeurs</p>
+</div>
 
 <?php $content = ob_get_clean(); ?>
 

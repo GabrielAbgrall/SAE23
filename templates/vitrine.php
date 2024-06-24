@@ -75,7 +75,7 @@
                 </div>
                 <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
                     <h6 class="text-uppercase mb-4 font-weight-bold">Contact : </h6>
-                    <p><i class="fas fa-home mr-3"></i> Tours, ADRESSE, FR</p>
+                    <p><i class="fas fa-home mr-3"></i> Nantes, 3 Boulevard de la République, FR</p>
                     <p><i class="fas fa-envelope mr-3"></i> com37@gmail.com</p>
                     <p><i class="fas fa-phone mr-3"></i> + 05 18 09 17 37</p>
                     <p><i class="fas fa-home mr-3"></i> Instagram : @37</p>
