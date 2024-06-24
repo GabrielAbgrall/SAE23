@@ -1,6 +1,8 @@
 <?php
 
-switch(strtolower($_SERVER['REQUEST_URI'])) {
+$uri = explode('?', $_SERVER['REQUEST_URI'])[0];
+
+switch($uri) {
     case '/':
         header('Location: /accueil');
         break;
@@ -23,6 +25,21 @@ switch(strtolower($_SERVER['REQUEST_URI'])) {
     case '/personnes':
         require_once 'controllers/vitrine.php';
         personnes();
+    case '/auth/login':
+        require_once 'controllers/auth.php';
+        login();
+        break;
+    case '/auth/logout':
+        require_once 'controllers/auth.php';
+        logout();
+        break;
+    case '/auth/register':
+        require_once 'controllers/auth.php';
+        register();
+        break;
+    case '/auth/unregister':
+        require_once 'controllers/auth.php';
+        unregister();
         break;
     default:
         header($_SERVER["SERVER_PROTOCOL"]." 404 Not Found");
