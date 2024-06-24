@@ -6,10 +6,20 @@ function get_users(){
     return load_data("users");
 }
 
-function get_users_with_permission($level){
+function get_users_min_permission($level){
     $users = array();
     foreach(get_users() as $u) {
         if(has_permission($u, $level)) array_push($u);
+    }
+    return $users;
+}
+
+function get_users_with_permission($level){
+    $users = array();
+    require_once 'models/groups.php';
+    foreach(get_users() as $u) {
+        $g = get_group($u['group']);
+        if($g['level'] == $level) array_push($u);
     }
     return $users;
 }
