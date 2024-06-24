@@ -77,11 +77,14 @@ function check_password($mail, $password){
     return password_verify($password, $user["password"]);
 }
 
+function has_permission($user, $permission_level) {
+    require_once 'models/groups.php';
+    return get_group($user['group'])['level'] >= $permission_level;
+}
+
 function has_permission($permission_level) {
     if(!is_connected()) return false;
-    
-    require_once 'models/groups.php';
-    return get_group($_SESSION['group'])['level'] >= $permission_level;
+    return has_permission($_SESSION, $permission_level);
 }
 
 ?>
