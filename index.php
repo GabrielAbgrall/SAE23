@@ -1,30 +1,32 @@
 <?php
 
+require_once 'utils.php';
+
 $uri = explode('?', $_SERVER['REQUEST_URI'])[0];
 
 switch($uri) {
     case '/':
-        header('Location: /accueil');
+        redirect('/home');
         break;
     case '/mvc-example':
         require_once 'controllers/mvc_example.php';
         mvc_example();
         break ;
-    case '/accueil':
-        require_once 'controllers/vitrine.php';
-        accueil();
+    case '/home':
+        require_once 'controllers/showcase.php';
+        home();
         break;
-    case '/a-propos':
-        require_once 'controllers/vitrine.php';
-        a_propos();
+    case '/about':
+        require_once 'controllers/showcase.php';
+        about();
         break;
     case '/activities':
-        require_once 'controllers/vitrine.php';
+        require_once 'controllers/showcase.php';
         activities();
         break;
-    case '/personnes':
-        require_once 'controllers/vitrine.php';
-        personnes();
+    case '/employees':
+        require_once 'controllers/showcase.php';
+        employees();
         break;
     case '/auth/login':
         require_once 'controllers/auth.php';
