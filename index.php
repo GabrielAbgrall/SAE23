@@ -5,13 +5,13 @@ require_once 'utils.php';
 $uri = explode('?', $_SERVER['REQUEST_URI'])[0];
 
 switch($uri) {
+
+    // HOME
     case '/':
         redirect('/home');
         break;
-    case '/mvc-example':
-        require_once 'controllers/mvc_example.php';
-        mvc_example();
-        break ;
+
+    // SHOWCASE
     case '/home':
         require_once 'controllers/showcase.php';
         home();
@@ -28,26 +28,8 @@ switch($uri) {
         require_once 'controllers/showcase.php';
         employees();
         break;
-    case '/auth/login':
-        require_once 'controllers/auth.php';
-        login();
-        break;
-    case '/auth/logout':
-        require_once 'controllers/auth.php';
-        logout();
-        break;
-    case '/auth/register':
-        require_once 'controllers/auth.php';
-        register();
-        break;
-    case '/auth/unregister':
-        require_once 'controllers/auth.php';
-        register();
-        break;
-    case '/auth/me':
-        require_once 'controllers/auth.php';
-        me();
-        break;
+    
+    // INTRANET
     case '/intranet':
         require_once 'controllers/intranet.php';
         intranet();
@@ -72,6 +54,30 @@ switch($uri) {
         require_once 'controllers/intranet.php';
         document();
         break;
+    
+    // AUTH
+    case '/auth/login':
+        require_once 'controllers/auth.php';
+        login();
+        break;
+    case '/auth/logout':
+        require_once 'controllers/auth.php';
+        logout();
+        break;
+    case '/auth/register':
+        require_once 'controllers/auth.php';
+        register();
+        break;
+    case '/auth/unregister':
+        require_once 'controllers/auth.php';
+        register();
+        break;
+    case '/auth/me':
+        require_once 'controllers/auth.php';
+        me();
+        break;
+    
+    // DEFAULT 404
     default:
         header($_SERVER["SERVER_PROTOCOL"]." 404 Not Found");
         break;
