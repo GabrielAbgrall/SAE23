@@ -1,17 +1,19 @@
 <?php
 
-function accueil() {
+function home() {
     if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-        require 'views/accueil.php';
+        require 'views/showcase/home.php';
     }
 }
 
 ?>
+
+
 <?php
 
-function a_propos() {
+function about() {
     if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-        require 'views/a_propos.php';
+        require 'views/showcase/about.php';
     }
 }
 
@@ -20,16 +22,16 @@ function a_propos() {
 
 function activities() {
     if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-        require 'views/activities.php';
+        require 'views/showcase/activities.php';
     }
 }
 
 ?>
 <?php
 
-function personnes() {
+function employees() {
     if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-        require 'views/personne.php';
+        require 'views/showcase/employees.php';
     }
 }
 

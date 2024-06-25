@@ -31,7 +31,9 @@
     <hr class="featurette-divider">
 </div>
 
+<div >
     <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
     
     <div class="carousel-indicators">
         <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
@@ -59,7 +61,7 @@
     <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
         <span class="carousel-control-next-icon"></span>
     </button>
-</div>
+    </div>
 
 
 
@@ -107,7 +109,7 @@
                 <h5 class="modal-title" id="quoteModalLabel">Demande de Devis</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
-                </button>
+                </button> 
             </div>
             <div class="modal-body">
                 <form id="quoteForm">
@@ -167,4 +169,4 @@
 
 <?php $content = ob_get_clean(); ?>
 
-<?php require 'templates/vitrine.php'; ?>
+<?php require 'templates/showcase.php'; ?>
