@@ -74,16 +74,19 @@ function remove_user($mail, $password){
     return true;
 }
 
-function modify_user($name, $firstname, $phone, $mail, $password, $group, $old_mail) {
+function modify_user($name, $firstname, $phone, $mail, $password, $group, $old_mail, $old_password) {
     if($mail != $old_mail && null !== get_user($mail)) return false;
 
-    remove_user($old_mail);
+    remove_user($old_mail, $old_password);
     create_user($name, $firstname, $phone, $mail, $password, $group);
+    
     return true;
 }
 
 function connect($mail, $password){
     if(!check_password($mail, $password))return false;
+    if(is_connected()) disconnect();
+    session_start();
     $user = get_user($mail);
     $_SESSION["mail"] = $mail;
     $_SESSION["name"] = $user["name"];
@@ -99,11 +102,11 @@ function is_connected() {
 
 function disconnect(){
     session_destroy();
-    unset($_SESSION);
 }
 
 function check_password($mail, $password){
     $user = get_user($mail);
+    if(!isset($user)) return false;
     return password_verify($password, $user["password"]);
 }
 

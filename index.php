@@ -72,7 +72,7 @@ switch($uri) {
         break;
     case '/auth/unregister':
         require_once 'controllers/auth.php';
-        register();
+        unregister();
         break;
     case '/auth/me':
         require_once 'controllers/auth.php';
