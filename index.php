@@ -78,6 +78,7 @@ switch($uri) {
     case '/personnes':
         require_once 'controllers/vitrine.php';
         personnes();
+        break;
     case '/auth/login':
         require_once 'controllers/auth.php';
         login();
