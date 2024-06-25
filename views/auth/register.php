@@ -6,7 +6,7 @@
     <h1>S'inscrire</h1>
     <input type="text" name="name" id="name" placeholder="Nom" required>
     <input type="text" name="firstname" id="firstname" placeholder="Prénom" required>
-    <input type="text" name="mail" id="mail" placeholder="Email" required>
+    <input type="email" name="mail" id="mail" placeholder="Email" required>
     <input type="tel" name="phone" id="phone" required>
     <input type="password" name="password" id="password" placeholder="Mot de passe" required>
     <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirmer le mot de passe" required>

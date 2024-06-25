@@ -61,10 +61,10 @@ function create_user($name, $firstname, $phone, $mail, $password, $group){
     save_data("users", $users);
     return true;
 }
+
 function user_conected(){
     return isset($_SESSION['user']);
 }
-
 
 function remove_user($mail, $password){
     if(!check_password($mail, $password))return false;
@@ -75,6 +75,14 @@ function remove_user($mail, $password){
         }
     }
     save_data("users", $users);
+    return true;
+}
+
+function modify_user($name, $firstname, $phone, $mail, $password, $group, $old_mail) {
+    if($mail != $old_mail && isset(get_user($mail))) return false;
+
+    remove_user($old_mail);
+    create_user($name, $firstname, $phone, $mail, $password, $group);
     return true;
 }
 
