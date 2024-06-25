@@ -68,30 +68,6 @@ switch($uri) {
     case '/intranet/document':
         require_once 'controllers/intranet.php';
         document();
-        break; 
-    case '/activities':
-        require_once 'controllers/vitrine.php';
-        activities();
-        break;
-    case '/personnes':
-        require_once 'controllers/vitrine.php';
-        personnes();
-        break;
-    case '/auth/login':
-        require_once 'controllers/auth.php';
-        login();
-        break;
-    case '/auth/logout':
-        require_once 'controllers/auth.php';
-        logout();
-        break;
-    case '/auth/register':
-        require_once 'controllers/auth.php';
-        register();
-        break;
-    case '/auth/unregister':
-        require_once 'controllers/auth.php';
-        unregister();
         break;
     default:
         header($_SERVER["SERVER_PROTOCOL"]." 404 Not Found");
