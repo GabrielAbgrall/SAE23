@@ -15,11 +15,28 @@
       <button class="btn btn-primary" type="button">Search</button>
     </form>
   </div>
-  <div>
-    <a class="navbar-brand" href="#" >
+  <div class="dropdown">
+    <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#" id="navbarDropdownMenuAvatar" role="button" data-bs-toggle="dropdown" aria-expanded="false">
       <img src="/src/img/user_logo.png" alt="Avatar Logo" style="width:60px;" class="rounded-pill"> 
     </a>
-  </div>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
+    <?php if(empty($_SESSION)) { ?>
+        <li>
+            <a class="dropdown-item" href="/auth/login">Se connecter</a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="/auth/register">S'inscrire</a>
+        </li>
+    <?php } else { ?>
+        <li>
+            <a class="dropdown-item" href="/auth/me">Mon compte</a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="/auth/logout">Se déconnecter</a>
+        </li>
+    <?php } ?>
+    </ul>
+</div>
 </header>
 
 <?php $header = ob_get_clean(); ?>
