@@ -109,32 +109,32 @@
                 <h5 class="modal-title" id="quoteModalLabel">Demande de Devis</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
-                </button>
+                </button> 
             </div>
             <div class="modal-body">
-            <form id="quoteForm">
-    <div class="form-group">
-        <label for="name">Nom</label>
-        <input type="text" class="form-control" id="name" placeholder="Votre nom" required>
-    </div>
-    <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" class="form-control" id="email" placeholder="Votre email" required>
-    </div>
-    <div class="form-group">
-        <label for="service">Service</label>
-        <select class="form-control" id="service" required>
-            <option>Marketing Digital</option>
-            <option>SEO</option>
-            <option>Community Management</option>
-        </select>
-    </div>
-    <div class="form-group">
-        <label for="message">Message</label>
-        <textarea class="form-control" id="message" rows="5" placeholder="Votre message" required></textarea>
-    </div>
-    <button type="button" class="btn btn-primary" onclick="submitForm()">Générer le Devis</button>
-</form>
+                <form id="quoteForm">
+                    <div class="form-group">
+                        <label for="name">Nom</label>
+                        <input type="text" class="form-control" id="name" placeholder="Votre nom" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Votre email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service</label>
+                        <select class="form-control" id="service" required>
+                            <option>Marketing Digital</option>
+                            <option>SEO</option>
+                            <option>Community Management</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" id="message" rows="5" placeholder="Votre message" required></textarea>
+                    </div>
+                    <button type="button" class="btn btn-primary" onclick="generatePDF()">Générer le Devis</button>
+                </form>
             </div>
         </div>
     </div>
@@ -146,31 +146,26 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+
 <script>
-    function submitForm() {
+    function generatePDF() {
+        const { jsPDF } = window.jspdf;
+
+        const doc = new jsPDF();
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
         const service = document.getElementById('service').value;
         const message = document.getElementById('message').value;
 
-        
-        axios.post('/accueil', {
-            name: name,
-            email: email,
-            service: service,
-            message: message
-        })
-        .then(function (response) {
-            console.log(response.data);
-            alert('Devis généré avec succès ! Nom du fichier : ' + response.data.pdf);
-        })
-        .catch(function (error) {
-            console.error(error);
-            alert('Une erreur est survenue lors de la génération du devis.');
-        });
+        doc.text(`Nom: ${name}`, 10, 10);
+        doc.text(`Email: ${email}`, 10, 20);
+        doc.text(`Service: ${service}`, 10, 30);
+        doc.text(`Message: ${message}`, 10, 40);
+
+        doc.save('devis.pdf');
     }
 </script>
+
 
 <?php $content = ob_get_clean(); ?>
 
