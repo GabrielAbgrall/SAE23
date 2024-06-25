@@ -1,51 +1,37 @@
 <?php
 
+session_start();
+
+require_once 'utils.php';
+
 $uri = explode('?', $_SERVER['REQUEST_URI'])[0];
 
 switch($uri) {
+
+    // HOME
     case '/':
-        header('Location: /accueil');
+        redirect('/home');
         break;
-    case '/mvc-example':
-        require_once 'controllers/mvc_example.php';
-        mvc_example();
-        break ;
-    case '/accueil':
-        require_once 'controllers/vitrine.php';
-        accueil();
+
+    // SHOWCASE
+    case '/home':
+        require_once 'controllers/showcase.php';
+        home();
         break;
-    case '/a-propos':
-        require_once 'controllers/vitrine.php';
-        a_propos();
+    case '/about':
+        require_once 'controllers/showcase.php';
+        about();
         break;
     case '/activities':
-        require_once 'controllers/vitrine.php';
+        require_once 'controllers/showcase.php';
         activities();
         break;
-    case '/personnes':
-        require_once 'controllers/vitrine.php';
-        personnes();
+    case '/employees':
+        require_once 'controllers/showcase.php';
+        employees();
         break;
-    case '/auth/login':
-        require_once 'controllers/auth.php';
-        login();
-        break;
-    case '/auth/logout':
-        require_once 'controllers/auth.php';
-        logout();
-        break;
-    case '/auth/register':
-        require_once 'controllers/auth.php';
-        register();
-        break;
-    case '/auth/unregister':
-        require_once 'controllers/auth.php';
-        register();
-        break;
-    case '/auth/me':
-        require_once 'controllers/auth.php';
-        me();
-        break;
+    
+    // INTRANET
     case '/intranet':
         require_once 'controllers/intranet.php';
         intranet();
@@ -70,6 +56,30 @@ switch($uri) {
         require_once 'controllers/intranet.php';
         document();
         break;
+    
+    // AUTH
+    case '/auth/login':
+        require_once 'controllers/auth.php';
+        login();
+        break;
+    case '/auth/logout':
+        require_once 'controllers/auth.php';
+        logout();
+        break;
+    case '/auth/register':
+        require_once 'controllers/auth.php';
+        register();
+        break;
+    case '/auth/unregister':
+        require_once 'controllers/auth.php';
+        unregister();
+        break;
+    case '/auth/me':
+        require_once 'controllers/auth.php';
+        me();
+        break;
+    
+    // DEFAULT 404
     default:
         header($_SERVER["SERVER_PROTOCOL"]." 404 Not Found");
         break;

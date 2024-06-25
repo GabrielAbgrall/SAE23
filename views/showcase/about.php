@@ -72,9 +72,38 @@
     <span class="carousel-control-next-icon"></span>
 </button>
 </div>
+<div class="container">
+    <hr class="featurette-divider">
+</div>
+<div class="container mt-3 text-center">
+  <h3>Nos partenaires</h3>           
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Téléphone</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+        <?php
+        require_once "./models/users.php";
 
+        $partenaires = get_users_with_permission_equals(10);
 
+        foreach($partenaires as $partenaire){
+            echo '<tr>
+                    <td>'.$partenaire["name"].' '.$partenaire["firstname"].'</td>
+                    <td>'.$partenaire["phone"].'</td>
+                    <td>'.$partenaire["mail"].'</td>
+                  </tr>';
+        };
+        ?>
+    </tbody>
+  </table>
+</div>
+<br>
 
 <?php $content = ob_get_clean(); ?>
 
-<?php require 'templates/vitrine.php'; ?>
+<?php require 'templates/showcase.php'; ?>
