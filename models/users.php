@@ -82,6 +82,7 @@ function connect($mail, $password){
     $_SESSION["name"] = $user["name"];
     $_SESSION["firstname"] = $user["firstname"];
     $_SESSION["group"] = $user["group"];
+    $_SESSION["phone"] = $user["phone"];
     return true;
 }
 

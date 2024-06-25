@@ -28,10 +28,8 @@ function abort($code) {
     exit;
 }
 
-function redirect($uri, $next=NULL) {
-    $uri = "Location:$uri";
-    if($next != NULL) $uri .= "?next=$next";
-    header($uri);
+function redirect($uri) {
+    header("Location:$uri");
     exit;
 }
 

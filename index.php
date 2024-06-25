@@ -37,10 +37,14 @@ switch($uri) {
         require_once 'controllers/auth.php';
         register();
         break;
-    case '/auth/unregister':
-        require_once 'controllers/auth.php';
-        unregister();
-        break;
+        case '/auth/unregister':
+            require_once 'controllers/auth.php';
+            unregister();
+            break;
+        case '/auth/me':
+            require_once 'controllers/auth.php';
+            me();
+            break;
     default:
         header($_SERVER["SERVER_PROTOCOL"]." 404 Not Found");
         break;
