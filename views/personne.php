@@ -27,7 +27,7 @@ foreach($directeurs as $directeur){
         </div>
         <div class="col-md-6">
             <h4>'.$directeur["name"].' '.$directeur["firstname"].'</h4>
-            <p>'.$directeur["poste"].'<br>'.$directeur["mail"].'<br>'.$directeur["phone"].'<br></p>
+            <p>Directeur<br>'.$directeur["mail"].'<br>'.$directeur["phone"].'<br></p>
         </div>
     </div>
     <div class="container">
