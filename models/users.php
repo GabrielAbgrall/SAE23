@@ -29,7 +29,7 @@ function get_users_with_permission_between($min, $max){
     require_once 'models/groups.php';
     foreach(get_users() as $u) {
         $g = get_group($u['group']);
-        if($g['level'] >= $min && $g['level'] < $min) {
+        if($g['level'] >= $min && $g['level'] <= $max) {
             array_push($users, $u);
         }
     }
