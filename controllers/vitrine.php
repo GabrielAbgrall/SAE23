@@ -7,6 +7,8 @@ function accueil() {
 }
 
 ?>
+
+
 <?php
 
 function a_propos() {
