@@ -1,4 +1,4 @@
-<?php $title = "Connexion"; ?>
+<?php $title = "S'inscrire"; ?>
 
 <?php ob_start(); ?>
 
