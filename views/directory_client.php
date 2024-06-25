@@ -11,7 +11,7 @@ $title = "DirectoryClient"; ?>
 $i=0;
 foreach (get_users_with_permission_equals(5) as $user){
   if ($i!=0 && fmod($i,3)==0){
-    echo "</div><div class='col-3 '>";
+    echo "</div><div class='col '>";
   }
   $name=$user['name'];
   $firstname=$user['firstname'];
