@@ -20,6 +20,16 @@
                 <li class="nav-item">
                     <a class="nav-link text-light" href="about">A propos</a>
                 </li>
+                <?php
+                require_once 'models/users.php';
+                if(is_connected() && has_permission(10)) {
+                ?>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="/intranet">Intranet</a>
+                    </li>
+                <?php
+                }
+                ?>
             </ul>
         </div>
         <div class="dropdown">
