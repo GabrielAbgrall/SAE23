@@ -61,6 +61,10 @@ function create_user($name, $firstname, $phone, $mail, $password, $group){
     save_data("users", $users);
     return true;
 }
+function user_conected(){
+    return isset($_SESSION['user']);
+}
+
 
 function remove_user($mail, $password){
     if(!check_password($mail, $password))return false;
