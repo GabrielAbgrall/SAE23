@@ -69,8 +69,6 @@ switch($uri) {
         require_once 'controllers/intranet.php';
         document();
         break; 
-<<<<<<< HEAD
-=======
     case '/activities':
         require_once 'controllers/vitrine.php';
         activities();
@@ -95,7 +93,6 @@ switch($uri) {
         require_once 'controllers/auth.php';
         unregister();
         break;
->>>>>>> origin/intranet
     default:
         header($_SERVER["SERVER_PROTOCOL"]." 404 Not Found");
         break;
