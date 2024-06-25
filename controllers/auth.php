@@ -3,17 +3,16 @@
 require_once 'utils.php';
 
 function login() {
+    $next = @$_REQUEST['next'];
+    if(!isset($next)) $next = '/';
+
     require_once 'models/users.php';
     switch($_SERVER['REQUEST_METHOD']) {
         case 'GET':
-            $next = $_REQUEST['next'];
-            if(!isset($next)) $next = '/';
             if(is_connected()) redirect($_REQUEST['next']);
             require_once 'views/auth/login.php';
             break;
         case 'POST':
-            $next = $_REQUEST['next'];
-            if(!isset($next)) $next = '/';
             if(connect($_POST['mail'], $_POST['password'])) {
                 redirect($next);
             }
@@ -32,6 +31,9 @@ function logout() {
 }
 
 function register() {
+    $next = @$_REQUEST['next'];
+    if(!isset($next)) $next = '/';
+    
     require_once 'models/users.php';
     switch($_SERVER['REQUEST_METHOD']) {
         case 'GET':
@@ -39,8 +41,8 @@ function register() {
             break;
         case 'POST':
             if(is_connected()) disconnect();
-            if($_POST['password'] != $_POST['confirm_password']) redirect('auth/register?error=Les mots de passe ne correspondent pas');
-            if(!str_contains($_POST['mail'], '@') || str_contains($_POST['mail'])) redirect('auth/register?error=Format du mail incorrect');
+            if($_POST['password'] != $_POST['confirm_password']) redirect('/auth/register?error=Les mots de passe ne correspondent pas');
+            if(!str_contains($_POST['mail'], '@') || str_contains($_POST['mail'], ' ')) redirect('/auth/register?error=Format du mail incorrect');
             if(create_user($_POST['name'], $_POST['firstname'], $_POST['phone'], $_POST['mail'], $_POST['password'], 'Invité')) {
                 connect($_POST['mail'], $_POST['password']);
                 redirect('/');

@@ -13,6 +13,9 @@
     <a href="/">Retour à l'acceuil</a>
 </form>
 
-<?php $content = ob_get_clean(); ?>
+<?php $main = ob_get_clean(); ?>
+
+<?php $header = ''; ?>
+<?php $footer = ''; ?>
 
 <?php require 'templates/base.php'; ?>

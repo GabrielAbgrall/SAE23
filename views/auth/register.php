@@ -7,14 +7,17 @@
     <input type="text" name="name" id="name" placeholder="Nom" required>
     <input type="text" name="firstname" id="firstname" placeholder="Prénom" required>
     <input type="email" name="mail" id="mail" placeholder="Email" required>
-    <input type="tel" name="phone" id="phone" required>
+    <input type="tel" name="phone" id="phone" placeholder="phone" required>
     <input type="password" name="password" id="password" placeholder="Mot de passe" required>
     <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirmer le mot de passe" required>
-    <input type="submit" value="S'inscrire'">
+    <input type="submit" value="S'inscrire">
 
     <a href="/auth/login">Se connecter</a>
 </form>
 
-<?php $content = ob_get_clean(); ?>
+<?php $main = ob_get_clean(); ?>
+
+<?php $header = ''; ?>
+<?php $footer = ''; ?>
 
 <?php require 'templates/base.php'; ?>

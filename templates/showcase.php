@@ -27,12 +27,21 @@
                 <img src="/src/img/avatar.ico" class="rounded-circle" height="30" alt="Avatar" loading="lazy"/>
             </a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
+            <?php if(empty($_SESSION)) { ?>
                 <li>
                     <a class="dropdown-item" href="auth/login">Se connecter</a>
                 </li>
                 <li>
                     <a class="dropdown-item" href="auth/register">S'inscrire</a>
                 </li>
+            <?php } else { ?>
+                <li>
+                    <a class="dropdown-item" href="auth/me">Mon compte</a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="auth/logout">Se déconnecter</a>
+                </li>
+            <?php } ?>
             </ul>
         </div>
     </nav>

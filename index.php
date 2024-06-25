@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 require_once 'utils.php';
 
 $uri = explode('?', $_SERVER['REQUEST_URI'])[0];

@@ -62,10 +62,6 @@ function create_user($name, $firstname, $phone, $mail, $password, $group){
     return true;
 }
 
-function user_conected(){
-    return isset($_SESSION['user']);
-}
-
 function remove_user($mail, $password){
     if(!check_password($mail, $password))return false;
     $users = array();
@@ -79,7 +75,7 @@ function remove_user($mail, $password){
 }
 
 function modify_user($name, $firstname, $phone, $mail, $password, $group, $old_mail) {
-    if($mail != $old_mail && isset(get_user($mail))) return false;
+    if($mail != $old_mail && null !== get_user($mail)) return false;
 
     remove_user($old_mail);
     create_user($name, $firstname, $phone, $mail, $password, $group);
@@ -89,7 +85,6 @@ function modify_user($name, $firstname, $phone, $mail, $password, $group, $old_m
 function connect($mail, $password){
     if(!check_password($mail, $password))return false;
     $user = get_user($mail);
-    session_start();
     $_SESSION["mail"] = $mail;
     $_SESSION["name"] = $user["name"];
     $_SESSION["firstname"] = $user["firstname"];
@@ -99,7 +94,7 @@ function connect($mail, $password){
 }
 
 function is_connected() {
-    return isset($_SESSION);
+    return !empty($_SESSION);
 }
 
 function disconnect(){

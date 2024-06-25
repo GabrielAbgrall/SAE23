@@ -11,6 +11,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body class="d-flex flex-column vh-100">
+    <div class="vw-100 bg-danger text-light text-center"><?=@$_REQUEST['error']?></div>
+
     <?=$header?>
     <?=$main?>
     <?=$footer?>
