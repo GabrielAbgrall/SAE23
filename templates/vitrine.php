@@ -1,16 +1,9 @@
-<!DOCTYPE html>
-<html lang ="fr">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <title><?=$title?></title>
-    <link rel="shortcut icon" type="image/x-icon" href="/src/img/37.ico" />
-</head>
+<?php ob_start();
 
-<body>
-    
+// HEADER
+?>
+
+<header>
     <nav class="navbar navbar-expand-lg  p-0 m-0 d-flex flex-row justify-content-between" style="background:#455A64">
         <div class="d-flex flex-row align-items-center justify-content-center m-0 p-0">
             <a class="navbar-brand m-0 p-0" href="accueil">
@@ -43,46 +36,65 @@
             </ul>
         </div>
     </nav>
+</header>
 
-    <main>
-        <?=$content?>
-    </main> 
+<?php $header = ob_get_clean(); ?>
 
 
-    <footer class="text-center text-lg-start text-secondary bg-body-tertiary rounded" >
-        <div class="container p-4 pb-0">
-            <div class="row">
-                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h6 class="text-uppercase mb-4 font-weight-bold">
-                    37
-                    </h6>
-                    <p>
-                    Le chiffre 37 n'est jamais choisi au hasard tout comme votre réussite ne sera jamais un hasard si vous choisissez de travailler avec nous !
-                    
-                    </p>
-                </div>
-                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                    <h6 class="text-uppercase mb-4 font-weight-bold">Services poprosés : </h6>
-                    <p>
-                    <a class="text-secondary">Community manager</a>
-                    </p>
-                    <p>
-                    <a class="text-secondary">Marketing</a>
-                    </p>
-                    <p>
-                    <a class="text-secondary">Conseiller commerciaux</a>
-                    </p>
-                </div>
-                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h6 class="text-uppercase mb-4 font-weight-bold">Contact : </h6>
-                    <p><i class="fas fa-home mr-3"></i> Nantes, 3 Boulevard de la République, FR</p>
-                    <p><i class="fas fa-envelope mr-3"></i> com37@gmail.com</p>
-                    <p><i class="fas fa-phone mr-3"></i> + 05 18 09 17 37</p>
-                    <p><i class="fas fa-home mr-3"></i> Instagram : @37</p>
-                </div>
+
+<?php ob_start();
+
+// MAIN
+?>
+
+<main>
+    <?=$content?>
+</main> 
+
+<?php $main = ob_get_clean(); ?>
+
+
+
+<?php ob_start();
+
+// FOOTER
+?>
+
+<footer class="text-center text-lg-start text-secondary bg-body-tertiary rounded" >
+    <div class="container p-4 pb-0">
+        <div class="row">
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">
+                37
+                </h6>
+                <p>
+                Le chiffre 37 n'est jamais choisi au hasard tout comme votre réussite ne sera jamais un hasard si vous choisissez de travailler avec nous !
+                
+                </p>
+            </div>
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">Services poprosés : </h6>
+                <p>
+                <a class="text-secondary">Community manager</a>
+                </p>
+                <p>
+                <a class="text-secondary">Marketing</a>
+                </p>
+                <p>
+                <a class="text-secondary">Conseiller commerciaux</a>
+                </p>
+            </div>
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">Contact : </h6>
+                <p><i class="fas fa-home mr-3"></i> Nantes, 3 Boulevard de la République, FR</p>
+                <p><i class="fas fa-envelope mr-3"></i> com37@gmail.com</p>
+                <p><i class="fas fa-phone mr-3"></i> + 05 18 09 17 37</p>
+                <p><i class="fas fa-home mr-3"></i> Instagram : @37</p>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
 
-</body> 
-</html>
+<?php $footer = ob_get_clean(); ?>
+
+<?php require 'templates/base.php'; ?>
