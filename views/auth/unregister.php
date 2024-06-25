@@ -18,4 +18,4 @@
 <?php $header = ''; ?>
 <?php $footer = ''; ?>
 
-<?php require 'templates/base.php'; ?>
+<?php require 'templates/showcase.php'; ?>
