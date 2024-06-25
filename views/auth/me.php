@@ -20,6 +20,7 @@
     <input type="submit" value="Appliquer les modifications'">
 
     <a href="/">Retour à l'acceuil</a>
+    <a href="/auth/unregister">Se désinscrire</a>
 </form>
 
 <?php $main = ob_get_clean(); ?>
