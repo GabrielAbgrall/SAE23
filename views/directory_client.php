@@ -5,7 +5,8 @@ require_once "models/users.php";
 $title = "DirectoryClient"; ?>
 
 <?php ob_start(); ?>
-<div class="row align-items-start custom-line">
+
+<div class="row align-items-start">
 <div class="col ">
 <?php
 $i=0;

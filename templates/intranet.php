@@ -57,7 +57,7 @@
           </li>
       </ul>
     </nav>
-    <main class="container pt-4 mt-4">
+    <main class="container py-4 my-4">
       <?=$content?>
     </main>
   </div>
