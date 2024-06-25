@@ -2,7 +2,7 @@
 
 <?php ob_start(); ?>
 
-<form class="container-fluid" action="/auth/register" method="POST">
+<form class="container-fluid" action="/auth/me" method="POST">
     <h1>Mon compte</h1>
 
     <input type="text" name="name" id="name" placeholder="Nom" required value="<?=$_SESSION['name']?>">
