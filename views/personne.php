@@ -11,10 +11,6 @@
     </div>
 </div>
 <br>
-<br>
-<div>
-    <p> fonction php qui affiche les directeurs et le site dont ils sont directeurs</p>
-</div>
 <?php
 require_once "./models/users.php";
 
