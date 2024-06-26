@@ -8,7 +8,7 @@ function read_file($path) {
     return $data;
 }
 
-function save_file($path, $data) {
+function write_file($path, $data) {
     $file = fopen($path, 'w');
     fwrite($file, $data);
     fclose($file);
@@ -20,7 +20,7 @@ function load_data($path) {
 }
 
 function save_data($path, $data) {
-    save_file("data/$path.json", json_encode($data));
+    write_file("data/$path.json", json_encode($data));
 }
 
 function abort($code) {
