@@ -5,7 +5,15 @@
 <div class="container mt-5">
     <h1 class="mb-4">Système de fichiers</h1>
 
-    <a><button><</button></a>
+    <?php
+    $e_dir = explode('/', $_REQUEST['dir']);
+    if(strlen($_REQUEST['dir']) >= 2) {
+        $previous_dir = substr($_REQUEST['dir'], 0, strlen($_REQUEST['dir']) - strlen($e_dir[count($e_dir)-1]));
+    ?>
+
+        <a href="/intranet/drive?dir="><button><</button></a>
+
+    <?php } ?>
 
     <?php foreach($files as $f) { ?>
     <div class="d-flex justify-content-between align-items-center border-bottom py-2">
