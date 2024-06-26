@@ -8,6 +8,25 @@ $uri = explode('?', $_SERVER['REQUEST_URI'])[0];
 
 switch($uri) {
 
+    case '/file':
+        switch($_SERVER['REQUEST_METHOD']) {
+            case 'GET':
+                echo "
+                <form action='/file' method='POST' enctype='multipart/form-data'>
+                    <input type='file' name='file' id='file'>
+                    <input type='submit' value='Envoyer le fichier'>
+                </form>
+                ";
+                break;
+            case 'POST':
+                require_once 'models/files.php';
+                require_once 'models/users.php';
+                // save_file('/', $_FILES['file'], 0);
+                var_dump(get_files(get_user($_SESSION['mail']), '/'));
+                break;
+        }
+        break;
+
     // HOME
     case '/':
         redirect('/home');
