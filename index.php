@@ -36,15 +36,15 @@ switch($uri) {
         require_once 'controllers/intranet.php';
         intranet();
         break;
-    case '/intranet/directory_client':
+    case '/intranet/directory-client':
         require_once 'controllers/intranet.php';
         directoryc();
         break;
-    case '/intranet/directory_partner':
+    case '/intranet/directory-partner':
         require_once 'controllers/intranet.php';
         directoryp();
         break;  
-    case '/intranet/directory_internal':
+    case '/intranet/directory-internal':
         require_once 'controllers/intranet.php';
         directoryi();
         break; 
@@ -52,9 +52,9 @@ switch($uri) {
         require_once 'controllers/intranet.php';
         wiki();
         break; 
-    case '/intranet/document':
+    case '/intranet/drive':
         require_once 'controllers/intranet.php';
-        document();
+        drive();
         break;
     
     // AUTH
