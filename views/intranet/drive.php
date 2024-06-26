@@ -5,7 +5,7 @@
 <div class="container mt-5">
     <h1 class="mb-4">Système de fichiers</h1>
 
-    <!-- Display files -->
+
     <?php foreach($files as $f) { ?>
     <div class="d-flex justify-content-between align-items-center border-bottom py-2">
         <p class="mb-0"><?=$f['name']?></p>
@@ -13,7 +13,6 @@
     </div>
     <?php } ?>
 
-    <!-- Display directories -->
     <?php foreach($dirs as $d) { ?>
     <div class="d-flex justify-content-between align-items-center border-bottom py-2">
         <a href='/intranet/drive?dir=<?=$_REQUEST['dir'].$d?>' class="text-decoration-none">
