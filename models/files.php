@@ -18,7 +18,7 @@ function get_files($user, $dir) {
     if($dir[-1] != '/') $dir .= '/';
 
     foreach(get_all_files() as $f) {
-        if(has_access($f, $user) && str_starts_with($f['path'], $dir)) {
+        if(has_access($f, $user) && strpos($f['path'], $dir) == 0) {
             $rel_path = explode('/', substr($f['path'], strlen($dir)));
             if(count($rel_path) == 1) {
                 array_push($files, $f);
@@ -34,7 +34,7 @@ function get_directories($user, $dir) {
     if($dir[-1] != '/') $dir .= '/';
 
     foreach(get_all_files() as $f) {
-        if(has_access($f, $user) && str_starts_with($f['path'], $dir)) {
+        if(has_access($f, $user) && strpos($f['path'], $dir) == 0) {
             $rel_path = explode('/', substr($f['path'], strlen($dir)));
             if(count($rel_path) > 1) {
                 array_push($dirs, $rel_path[0]);
