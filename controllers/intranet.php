@@ -3,7 +3,7 @@ require_once "utils.php";
 function intranet() {
     require_once "models/users.php";
     if (!has_permission(10)) abort(403);
-    
+
     if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         require 'views/intranet/intranet.php';
     }
@@ -45,6 +45,21 @@ function drive() {
     if (!has_permission(10)) abort(403);
 
     if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+        require_once 'models/files.php';
+    
+        $dir = @$_GET['dir'];
+        if($dir == null) {
+            redirect('/intranet/drive?dir=/');
+        }
+
+        $files = get_files($_SESSION, $dir);
+        $dirs = get_directories($_SESSION, $dir);
+
+        $file = @$_GET['file'];
+        if(isset($file)) {
+            download_file($file);
+        }
+
         require 'views/intranet/drive.php';
     }
 }

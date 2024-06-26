@@ -37,7 +37,7 @@ function get_directories($user, $dir) {
         if(has_access($f, $user) && str_starts_with($f['path'], $dir)) {
             $rel_path = explode('/', substr($f['path'], strlen($dir)));
             if(count($rel_path) > 1) {
-                array_push($dirs, $rel_path[1]);
+                array_push($dirs, $rel_path[0]);
             }
         }
     }

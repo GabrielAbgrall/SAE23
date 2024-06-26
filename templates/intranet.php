@@ -9,12 +9,7 @@
       <img src="/src/img/37.ico" height="75px" alt="Logo" loading="lazy"/>
     </a>
   </div>
-  <div >
-    <form class="d-flex" >
-      <input class="form-control me-2" type="text" placeholder="Search">
-      <button class="btn btn-primary" type="button">Search</button>
-    </form>
-  </div>
+    
   <div class="dropdown">
     <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#" id="navbarDropdownMenuAvatar" role="button" data-bs-toggle="dropdown" aria-expanded="false">
       <img src="/src/img/user_logo.png" alt="Avatar Logo" style="width:60px;" class="rounded-pill"> 
@@ -48,26 +43,26 @@
 // MAIN
 ?>
 
-<div class="d-flex flex-row h-100">
+<div class="d-flex flex-row h-100 ">
   <nav class="navbar d-flex flex-row h-100 align-items-start "  style="background:#455A64">
     <ul class="nav d-flex flex-column ">
       <li class="nav-item align-item-center">
-        <a class="navbar-brand " href="/intranet/document">
+        <a class="navbar-brand " href="/intranet/drive">
           <img src="/src/img/file_icon.png" width="60" height="60" alt="">
         </a>
       </li>
       <li class="nav-item align-item-center">
-        <a class="navbar-brand " href="/intranet/directory_internal">
+        <a class="navbar-brand " href="/intranet/directory-internal">
           <img src="/src/img/directoryi_icon.png" width="60" height="60" alt="">
         </a>
       </li>
       <li class="nav-item align-item-center">
-        <a class="navbar-brand " href="/intranet/directory_partner">
+        <a class="navbar-brand " href="/intranet/directory-partner">
           <img src="/src/img/directoryp_icon.png" width="60" height="60" alt="">
         </a>
       </li>
       <li class="nav-item align-item-center">
-        <a class="navbar-brand " href="/intranet/directory_client">
+        <a class="navbar-brand " href="/intranet/directory-client">
           <img src="/src/img/directoryc_icon.png" width="60" height="60" alt="">
         </a>
         </li>
