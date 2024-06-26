@@ -27,9 +27,9 @@ function wiki() {
         require 'views/wiki.php';
     }
 }
-function document() {
+function drive() {
     if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-        require 'views/document.php';
+        require 'views/drive.php';
     }
 }
 

@@ -8,26 +8,6 @@ $uri = explode('?', $_SERVER['REQUEST_URI'])[0];
 
 switch($uri) {
 
-    case '/file':
-        switch($_SERVER['REQUEST_METHOD']) {
-            case 'GET':
-                echo "
-                <form action='/file' method='POST' enctype='multipart/form-data'>
-                    <input type='file' name='file' id='file'>
-                    <input type='submit' value='Envoyer le fichier'>
-                </form>
-                ";
-                require_once 'models/files.php';
-                require_once 'models/users.php';
-                var_dump(get_files(get_user($_SESSION['mail']), '/'));
-                break;
-            case 'POST':
-                require_once 'models/files.php';
-                // save_file('/', $_FILES['file'], 0);
-                break;
-        }
-        break;
-
     // HOME
     case '/':
         redirect('/home');
@@ -56,15 +36,15 @@ switch($uri) {
         require_once 'controllers/intranet.php';
         intranet();
         break;
-    case '/intranet/directory_client':
+    case '/intranet/directory-client':
         require_once 'controllers/intranet.php';
         directoryc();
         break;
-    case '/intranet/directory_partner':
+    case '/intranet/directory-partner':
         require_once 'controllers/intranet.php';
         directoryp();
         break;  
-    case '/intranet/directory_internal':
+    case '/intranet/directory-internal':
         require_once 'controllers/intranet.php';
         directoryi();
         break; 
@@ -72,9 +52,9 @@ switch($uri) {
         require_once 'controllers/intranet.php';
         wiki();
         break; 
-    case '/intranet/document':
+    case '/intranet/drive':
         require_once 'controllers/intranet.php';
-        document();
+        drive();
         break;
     
     // AUTH
