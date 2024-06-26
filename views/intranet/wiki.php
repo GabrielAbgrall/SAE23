@@ -27,7 +27,7 @@
 <h2 class="rounded" style="background:#CFD8DC">Présentation de l'intranet</h2>
 <h3>Document</h3>
 <p>Possibilité de déposer, modifier, ajouter, supprimer des documents de l'intranet</p>
-<h3>Annuraires</h3>
+<h3>Annuaires</h3>
 <p>Différents annuraires permettant d'afficher les différentes cartes de visites des membres de l'entreprise,des partenaires ou encore des clients</p>
 <h3>Wiki</h3>
 <p>La page ou nous sommes qui informe sur l'utilisation du site</p>
