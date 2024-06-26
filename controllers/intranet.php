@@ -2,12 +2,12 @@
 require_once "utils.php";
 function intranet() {
     if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-        require 'views/intranet.php';
+        require 'views/intranet/intranet.php';
     }
 }
 function directoryp() {
     if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-        require 'views/directory_partner.php';
+        require 'views/intranet/directory_partner.php';
     }
 }
 function directoryi() {
@@ -19,17 +19,17 @@ function directoryi() {
 }
 function directoryc() {
     if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-        require 'views/directory_client.php';
+        require 'views/intranet/directory_client.php';
     }
 }
 function wiki() {
     if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-        require 'views/wiki.php';
+        require 'views/intranet/wiki.php';
     }
 }
 function drive() {
     if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-        require 'views/drive.php';
+        require 'views/intranet/drive.php';
     }
 }
 
