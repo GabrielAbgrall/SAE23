@@ -62,6 +62,23 @@ function drive() {
 
         require 'views/intranet/drive.php';
     }
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        require_once 'models/files.php';
+    
+        $dir = @$_GET['dir'];
+        if($dir == null) {
+            redirect('/intranet/drive?dir=/');
+        }
+
+        $file = @$_FILES['file'];
+        if(isset($file)) {
+            save_file($dir, $file, $_POST['access_level']);
+        }
+
+        redirect("/intranet/drive?dir=$dir");
+
+        require 'views/intranet/drive.php';
+    }
 }
 
 ?>
