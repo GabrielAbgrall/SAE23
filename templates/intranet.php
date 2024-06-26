@@ -52,22 +52,22 @@
   <nav class="navbar d-flex flex-row h-100 align-items-start "  style="background:#455A64">
     <ul class="nav d-flex flex-column ">
       <li class="nav-item align-item-center">
-        <a class="navbar-brand " href="/intranet/document">
+        <a class="navbar-brand " href="/intranet/drive">
           <img src="/src/img/file_icon.png" width="60" height="60" alt="">
         </a>
       </li>
       <li class="nav-item align-item-center">
-        <a class="navbar-brand " href="/intranet/directory_internal">
+        <a class="navbar-brand " href="/intranet/directory-internal">
           <img src="/src/img/directoryi_icon.png" width="60" height="60" alt="">
         </a>
       </li>
       <li class="nav-item align-item-center">
-        <a class="navbar-brand " href="/intranet/directory_partner">
+        <a class="navbar-brand " href="/intranet/directory-partner">
           <img src="/src/img/directoryp_icon.png" width="60" height="60" alt="">
         </a>
       </li>
       <li class="nav-item align-item-center">
-        <a class="navbar-brand " href="/intranet/directory_client">
+        <a class="navbar-brand " href="/intranet/directory-client">
           <img src="/src/img/directoryc_icon.png" width="60" height="60" alt="">
         </a>
         </li>
