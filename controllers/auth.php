@@ -43,7 +43,7 @@ function register() {
             if(is_connected()) disconnect();
             if($_POST['password'] != $_POST['confirm_password']) redirect('/auth/register?error=Les mots de passe ne correspondent pas');
             if(strlen($_POST['password']) < 3) redirect('/auth/register?error=Le mot de passe est trop court');
-            if(strpos($_POST['mail'], '@') == false || strpos($_POST['mail'], ' ') != false) redirect('/auth/register?error=Format du mail incorrect');
+            if(strpos($_POST['mail'], '@') === false || strpos($_POST['mail'], ' ') !== false) redirect('/auth/register?error=Format du mail incorrect');
             if(create_user($_POST['name'], $_POST['firstname'], $_POST['phone'], $_POST['mail'], $_POST['password'], 'Invité')) {
                 connect($_POST['mail'], $_POST['password']);
                 redirect('/');

@@ -5,6 +5,8 @@
 <div class="container mt-5">
     <h1 class="mb-4">Système de fichiers</h1>
 
+    <a><button><</button></a>
+
     <?php foreach($files as $f) { ?>
     <div class="d-flex justify-content-between align-items-center border-bottom py-2">
         <p class="mb-0"><?=$f['name']?></p>
