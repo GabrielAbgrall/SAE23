@@ -2,6 +2,10 @@
 
 <?php ob_start(); ?>
 
+<div class="container">
+    <hr class="featurette-divider">
+</div>
+
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -36,6 +40,10 @@
             </div>
         </div>
     </div>
+</div>
+
+<div class="container">
+    <hr class="featurette-divider">
 </div>
 
 <?php $main = ob_get_clean(); ?>
