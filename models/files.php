@@ -18,7 +18,7 @@ function get_files($user, $dir) {
     if($dir[-1] != '/') $dir .= '/';
 
     foreach(get_all_files() as $f) {
-        if(has_access($f, $u) && str_starts_with($f['path'], $dir)) {
+        if(has_access($f, $user) && str_starts_with($f['path'], $dir)) {
             $rel_path = explode('/', substr($f['path'], strlen($dir)));
             if(count($rel_path) == 1) {
                 array_push($files, $f);
@@ -34,7 +34,7 @@ function get_directories($user, $dir) {
     if($dir[-1] != '/') $dir .= '/';
 
     foreach(get_all_files() as $f) {
-        if(has_access($f, $u) && str_starts_with($f['path'], $dir)) {
+        if(has_access($f, $user) && str_starts_with($f['path'], $dir)) {
             $rel_path = explode('/', substr($f['path'], strlen($dir)));
             if(count($rel_path) > 1) {
                 array_push($dirs, $rel_path[1]);
@@ -91,12 +91,11 @@ function delete_file($path) {
 
 }
 
-function has_access($path, $user) {
-    $f = get_file($path);
-    if(!isset($f)) return false;
+function has_access($file, $user) {
+    if(!isset($file)) return false;
 
     require_once 'models/users.php';
-    if(has_permission($f['access_level'], $user)) return true;
+    if(has_permission($file['access_level'], $user)) return true;
     else return false;
 }
 

@@ -17,12 +17,13 @@ switch($uri) {
                     <input type='submit' value='Envoyer le fichier'>
                 </form>
                 ";
+                require_once 'models/files.php';
+                require_once 'models/users.php';
+                var_dump(get_files(get_user($_SESSION['mail']), '/'));
                 break;
             case 'POST':
                 require_once 'models/files.php';
-                require_once 'models/users.php';
                 // save_file('/', $_FILES['file'], 0);
-                var_dump(get_files(get_user($_SESSION['mail']), '/'));
                 break;
         }
         break;
