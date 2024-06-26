@@ -31,7 +31,9 @@
 <p>Différents annuraires permettant d'afficher les différentes cartes de visites des membres de l'entreprise,des partenaires ou encore des clients</p>
 <h3>Wiki</h3>
 <p>La page ou nous sommes qui informe sur l'utilisation du site</p>
-
+<h3>Connexion</h3>
+<p>davidgatel@gmail.com / bonjour</p>
+<p>frmenguy@gmail.com / bonjour</p>
 
 <?php $content = ob_get_clean(); ?>
 
