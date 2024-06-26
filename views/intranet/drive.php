@@ -11,7 +11,7 @@
         $previous_dir = substr($_REQUEST['dir'], 0, strlen($_REQUEST['dir']) - strlen($e_dir[count($e_dir)-1]));
     ?>
 
-        <a href="/intranet/drive?dir="><button><</button></a>
+        <a href="/intranet/drive?dir="><button type="button" class="btn btn-success">Retour</button> </a>
 
     <?php } ?>
 
